@@ -948,7 +948,9 @@ async function carregarAdmin() {
       headers: { 'Authorization': 'Bearer ' + adminToken }
     });
     if (!resp.ok) {
-      lista.innerHTML = '<p style="color:#ff8888;text-align:center;padding:16px">Erro ao carregar. Tente fazer login novamente.</p>';
+      var errText = '';
+      try { var errJson = await resp.json(); errText = errJson.error || resp.statusText; } catch(e) { errText = resp.status + ' ' + resp.statusText; }
+      lista.innerHTML = '<p style="color:#ff8888;text-align:center;padding:16px">Erro ' + resp.status + ': ' + errText + '</p>';
       return;
     }
     var d = await resp.json();
