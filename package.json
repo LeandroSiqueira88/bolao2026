@@ -1,101 +1,17 @@
-# 🏆 Bolão Entre Amigos 2026 — Deploy no Render.com
-
-## Estrutura dos arquivos
-```
-bolao/
-├── server.js          ← backend Node.js (API + agente IA)
-├── package.json       ← dependências
-└── public/
-    └── index.html     ← frontend completo
-```
-
----
-
-## PASSO 1 — Sobe o código no GitHub
-
-1. Acesse https://github.com e crie uma conta (se não tiver)
-2. Clique em **"New repository"**
-   - Nome: `bolao2026`
-   - Visibilidade: **Private** (recomendado)
-   - Clique em **"Create repository"**
-3. Na página seguinte, clique em **"uploading an existing file"**
-4. Arraste os 3 arquivos: `server.js`, `package.json` e a pasta `public/` com o `index.html`
-5. Clique em **"Commit changes"**
-
----
-
-## PASSO 2 — Cria o banco PostgreSQL no Render
-
-1. Acesse https://render.com e crie uma conta gratuita
-2. No dashboard, clique em **"New +"** → **"PostgreSQL"**
-3. Configure:
-   - Name: `bolao2026-db`
-   - Database: `bolao2026`
-   - User: `bolao`
-   - Region: `Ohio (US East)` ← mais estável no plano free
-   - Plan: **Free**
-4. Clique em **"Create Database"**
-5. Aguarde ~2 minutos
-6. Na página do banco, copie a **"Internal Database URL"** — vai parecer com:
-   ```
-   postgresql://bolao:SENHA@dpg-xxxxx-a/bolao2026
-   ```
-
----
-
-## PASSO 3 — Cria o Web Service no Render
-
-1. No dashboard, clique em **"New +"** → **"Web Service"**
-2. Conecte com o GitHub e selecione o repositório `bolao2026`
-3. Configure:
-   - Name: `bolao2026`
-   - Region: `Ohio (US East)` ← mesmo do banco!
-   - Branch: `main`
-   - Runtime: **Node**
-   - Build Command: `npm install`
-   - Start Command: `npm start`
-   - Plan: **Free**
-4. Clique em **"Advanced"** e adicione as variáveis de ambiente:
-
-| Key | Value |
-|-----|-------|
-| `DATABASE_URL` | Cole a Internal Database URL do Passo 2 |
-| `ANTHROPIC_API_KEY` | Sua chave da API da Anthropic |
-| `ADMIN_PASSWORD` | `Bolaodobrow2026` |
-| `NODE_ENV` | `production` |
-
-5. Clique em **"Create Web Service"**
-6. Aguarde o deploy (~3-5 minutos)
-7. Seu site estará em: `https://bolao2026.onrender.com`
-
----
-
-## PASSO 4 — Onde pegar a chave da Anthropic
-
-1. Acesse https://console.anthropic.com
-2. Vá em **"API Keys"** → **"Create Key"**
-3. Copie a chave (começa com `sk-ant-...`)
-4. Cole no campo `ANTHROPIC_API_KEY` do Render
-
----
-
-## PASSO 5 — Teste tudo!
-
-1. Abra seu site `https://bolao2026.onrender.com`
-2. Faça uma inscrição de teste
-3. Clique em ⚙️ Admin e entre com `Bolaodobrow2026`
-4. Confirme o pagamento de teste
-5. Insira resultados e clique **"Salvar & Recalcular"**
-6. Clique em **"🤖 Análise IA"** — o agente vai analisar os palpites
-
----
-
-## ⚠️ Importante sobre o plano gratuito do Render
-
-O plano Free "dorme" após 15 minutos sem acessos. O primeiro acesso depois leva ~30 segundos para acordar. Para evitar isso, use o plano Starter ($7/mês) ou um serviço como https://uptimerobot.com para fazer ping a cada 14 minutos (gratuito).
-
----
-
-## Como atualizar o site depois
-
-Qualquer alteração nos arquivos do GitHub automaticamente faz um novo deploy no Render. Basta editar e fazer commit!
+{
+  "name": "bolao2026",
+  "version": "1.0.0",
+  "description": "Bolão Entre Amigos Copa do Mundo 2026",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "pg": "^8.11.3",
+    "cors": "^2.8.5",
+    "@anthropic-ai/sdk": "^0.24.0",
+    "multer": "^1.4.5-lts.1"
+  }
+}
