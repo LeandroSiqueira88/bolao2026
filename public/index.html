@@ -1,0 +1,1422 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bolão Entre Amigos 2026 🏆</title>
+<meta name="description" content="Bolão da Copa do Mundo 2026 entre amigos. Faça seu palpite!">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚽</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --verde:#009c3b; --verde-escuro:#006e29; --verde2:#00c846;
+  --amarelo:#FFDF00; --amarelo-escuro:#e6c800;
+  --azul:#002776; --azul-escuro:#001550; --azul3:#001030;
+  --branco:#ffffff;
+  --card:rgba(255,255,255,.06);
+  --border:rgba(255,255,255,.12);
+  --muted:rgba(255,255,255,.5);
+  --danger:#ff4d4d;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Barlow',sans-serif;background:var(--azul-escuro);color:var(--branco);overflow-x:hidden}
+
+/* ── NAV ── */
+.nav{background:var(--azul3);border-bottom:3px solid var(--amarelo-escuro);position:sticky;top:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 20px;height:56px}
+.nav-logo{font-size:1.5rem;color:var(--amarelo);letter-spacing:3px}
+.nav-tabs{display:flex;gap:2px}
+.ntab{background:none;border:none;color:var(--muted);font-weight:700;font-size:.8rem;letter-spacing:1.5px;text-transform:uppercase;padding:8px 12px;cursor:pointer;border-radius:6px;transition:all .2s;display:flex;align-items:center;gap:5px}
+.ntab:hover{color:var(--branco);background:rgba(255,255,255,.08)}
+.ntab.active{color:var(--amarelo);background:rgba(255,223,0,.12)}
+
+/* ── HERO ── */
+.hero{background:linear-gradient(160deg,#004a1a 0%,#002776 60%,#001550 100%);position:relative;overflow:hidden;padding:60px 20px 50px;text-align:center}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(255,223,0,.15) 0%,transparent 70%);pointer-events:none}
+.confetti{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;overflow:hidden}
+.confetti span{position:absolute;width:8px;height:14px;opacity:0;animation:fall linear infinite}
+@keyframes fall{0%{transform:translateY(-20px) rotate(0deg);opacity:1}100%{transform:translateY(110vh) rotate(720deg);opacity:0}}
+.trophy-icon{font-size:4rem;margin-bottom:8px;display:block;animation:bounce 2s ease-in-out infinite}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.hero h1{font-size:clamp(3.5rem,10vw,7rem);letter-spacing:2px;line-height:.95;color:var(--amarelo);text-shadow:4px 4px 0 var(--azul-escuro),0 0 40px rgba(255,223,0,.4)}
+.hero h1 span{color:var(--branco)}
+.hero .sub{font-size:clamp(1.1rem,3vw,1.6rem);font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--verde);margin:10px 0 20px}
+.prazo-badge{display:inline-block;background:linear-gradient(135deg,var(--amarelo),var(--amarelo-escuro));color:var(--azul-escuro);font-weight:800;font-size:1rem;letter-spacing:1px;padding:8px 22px;border-radius:50px;text-transform:uppercase;box-shadow:0 4px 20px rgba(255,223,0,.5)}
+
+/* ── STEPS ── */
+.steps-section{background:linear-gradient(180deg,#001550 0%,#002776 100%);padding:60px 20px}
+.section-title{text-align:center;font-size:clamp(2rem,6vw,3.5rem);letter-spacing:3px;margin-bottom:40px;color:var(--amarelo)}
+.section-title span{color:var(--branco)}
+.steps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;max-width:900px;margin:0 auto}
+.step-card{background:rgba(255,255,255,.06);border:2px solid rgba(255,223,0,.25);border-radius:16px;padding:28px 20px;text-align:center;position:relative;transition:transform .3s,border-color .3s}
+.step-card:hover{transform:translateY(-6px);border-color:var(--amarelo)}
+.step-number{position:absolute;top:-16px;left:50%;transform:translateX(-50%);background:var(--amarelo);color:var(--azul-escuro);font-size:1.4rem;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.step-icon{font-size:2.8rem;margin:10px 0 12px;display:block}
+.step-card h3{font-size:1.25rem;font-weight:800;text-transform:uppercase;color:var(--amarelo);letter-spacing:1px;margin-bottom:8px}
+.step-card p{font-size:.92rem;color:rgba(255,255,255,.8);line-height:1.5}
+
+/* ── PIX INFO ── */
+.info-section{background:var(--verde-escuro);padding:50px 20px}
+.info-inner{max-width:800px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.info-card{background:rgba(0,0,0,.25);border-radius:14px;padding:22px 20px;text-align:center;border:2px solid rgba(255,223,0,.3)}
+.info-card .label{font-size:.85rem;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:6px}
+.info-card .value{font-size:2rem;color:var(--amarelo);letter-spacing:1px}
+.info-card .icon{font-size:1.8rem;margin-bottom:8px}
+
+/* ── PONTUAÇÃO ── */
+.pontos-section{background:linear-gradient(160deg,#002776 0%,#001550 100%);padding:60px 20px}
+.pontos-grid{max-width:800px;margin:0 auto;display:grid;gap:10px}
+.ponto-row{display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,.05);border-left:4px solid var(--verde);border-radius:0 10px 10px 0;padding:14px 18px;gap:12px;transition:background .2s}
+.ponto-row:hover{background:rgba(255,255,255,.09)}
+.ponto-row.destaque{border-left-color:var(--amarelo);background:rgba(255,223,0,.08)}
+.ponto-row .desc{font-size:1.05rem;font-weight:600}
+.ponto-row .pts{font-size:1.6rem;color:var(--amarelo);white-space:nowrap}
+
+/* ── PREMIAÇÃO ── */
+.premio-section{background:var(--azul-escuro);padding:60px 20px}
+.podium{max-width:600px;margin:0 auto;display:flex;align-items:flex-end;justify-content:center;gap:12px}
+.podium-item{flex:1;text-align:center;border-radius:12px 12px 0 0;padding:20px 10px 16px;font-family:'Barlow Condensed',sans-serif}
+.podium-item .place{font-size:2rem;margin-bottom:4px}
+.podium-item .pct{font-size:2.2rem;color:var(--amarelo)}
+.podium-item .desc{font-size:.85rem;color:rgba(255,255,255,.7);margin-top:4px}
+.p1{background:linear-gradient(180deg,#b8960c,#7a6008);height:180px}
+.p2{background:linear-gradient(180deg,#5a5a6a,#3a3a4a);height:140px}
+.p3{background:linear-gradient(180deg,#7a4a1e,#4a2a0e);height:110px}
+.adm-note{text-align:center;margin-top:20px;font-size:.9rem;color:rgba(255,255,255,.55)}
+
+/* ── DIVIDER ── */
+.divider{height:4px;background:linear-gradient(90deg,var(--verde),var(--amarelo),var(--verde))}
+
+/* ── RANKING SECTION ── */
+.ranking-section{background:linear-gradient(160deg,#002776 0%,#001030 100%);padding:60px 20px}
+.stat-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;max-width:800px;margin:0 auto 32px}
+.stat-box{background:rgba(255,255,255,.05);border:1px solid var(--border);border-radius:10px;padding:14px;text-align:center}
+.stat-box .sv{font-size:2rem;color:var(--amarelo);line-height:1}
+.stat-box .sl{font-size:.75rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-top:4px}
+.ranking-list{max-width:800px;margin:0 auto}
+.rank-card{display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px 16px;margin-bottom:10px;transition:all .2s}
+.rank-card.gold{border-color:rgba(255,200,0,.5);background:rgba(255,200,0,.08)}
+.rank-card.silver{border-color:rgba(180,180,200,.4);background:rgba(180,180,200,.06)}
+.rank-card.bronze{border-color:rgba(160,100,40,.4);background:rgba(160,100,40,.06)}
+.rank-pos{font-size:1.8rem;min-width:36px;text-align:center}
+.rank-pos.p1c{color:gold}.rank-pos.p2c{color:#c0c0c0}.rank-pos.p3c{color:#cd7f32}
+.rank-info{flex:1}
+.rank-name{font-size:1.1rem;font-weight:800;text-transform:uppercase;letter-spacing:.5px}
+.rank-meta{font-size:.78rem;color:var(--muted);margin-top:2px}
+.rank-pts{font-size:1.8rem;color:var(--amarelo)}
+.rank-pts small{font-family:'Barlow',sans-serif;font-size:.75rem;color:var(--muted);font-weight:400}
+.empty-state{text-align:center;padding:48px 20px;color:var(--muted)}
+.ai-btn{display:block;max-width:800px;margin:20px auto 0;width:100%;font-weight:800;font-size:1.1rem;letter-spacing:2px;text-transform:uppercase;border:2px solid rgba(255,223,0,.3);border-radius:10px;padding:14px;background:rgba(255,223,0,.06);color:var(--amarelo);cursor:pointer;transition:all .2s}
+.ai-btn:hover{background:rgba(255,223,0,.12);border-color:var(--amarelo)}
+.ai-box{max-width:800px;margin:16px auto 0;background:rgba(0,156,59,.06);border:1px solid rgba(0,156,59,.25);border-radius:12px;padding:20px;display:none}
+.ai-msg{font-size:.92rem;line-height:1.75;color:rgba(255,255,255,.88);white-space:pre-wrap}
+.ai-typing{display:flex;gap:5px;align-items:center;padding:4px 0}
+.ai-dot{width:7px;height:7px;border-radius:50%;background:var(--verde2);animation:pulse .8s ease-in-out infinite}
+.ai-dot:nth-child(2){animation-delay:.15s}.ai-dot:nth-child(3){animation-delay:.3s}
+@keyframes pulse{0%,80%,100%{transform:scale(.6);opacity:.4}40%{transform:scale(1);opacity:1}}
+
+/* ── FORMULÁRIO ── */
+.form-section{background:linear-gradient(160deg,#003a10 0%,#002776 100%);padding:60px 20px 80px}
+.form-wrapper{max-width:760px;margin:0 auto;background:rgba(255,255,255,.04);border:2px solid rgba(255,223,0,.2);border-radius:20px;overflow:hidden}
+.form-header{background:linear-gradient(135deg,var(--verde-escuro),var(--azul));padding:28px 28px 24px;text-align:center}
+.form-header h2{font-size:2.2rem;letter-spacing:2px;color:var(--amarelo)}
+.form-header p{font-size:.9rem;color:rgba(255,255,255,.8);margin-top:6px}
+.form-body{padding:28px}
+.field-group{margin-bottom:22px}
+.field-group label{display:block;font-size:.82rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--amarelo);margin-bottom:8px}
+.field-group label span{color:var(--danger);margin-left:2px}
+.field-group input[type=text],.field-group input[type=tel],.field-group input[type=file],.field-group select{width:100%;padding:12px 16px;background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.2);border-radius:10px;color:var(--branco);font-family:'Barlow',sans-serif;font-size:1rem;transition:border-color .2s;outline:none}
+.field-group input:focus,.field-group select:focus{border-color:var(--amarelo)}
+.field-group input::placeholder{color:rgba(255,255,255,.35)}
+.field-group select option{background:#002776}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+.radio-group{display:flex;gap:12px;flex-wrap:wrap}
+.radio-label{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.07);border:1.5px solid rgba(255,255,255,.2);border-radius:10px;padding:10px 18px;cursor:pointer;transition:all .2s;font-size:1rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.85)}
+.radio-label:hover{border-color:var(--amarelo);background:rgba(255,223,0,.08)}
+.radio-label.sel{border-color:var(--verde);background:rgba(0,156,59,.2);color:var(--branco)}
+.radio-label input{display:none}
+.checkbox-label{display:flex;align-items:flex-start;gap:12px;background:rgba(0,156,59,.1);border:1.5px solid rgba(0,156,59,.4);border-radius:10px;padding:14px 16px;cursor:pointer;font-size:.95rem;line-height:1.4}
+.checkbox-label input[type=checkbox]{width:20px;height:20px;flex-shrink:0;accent-color:var(--verde);cursor:pointer;margin-top:2px}
+.submit-btn{width:100%;padding:18px;background:linear-gradient(135deg,var(--amarelo),var(--amarelo-escuro));color:var(--azul-escuro);border:none;border-radius:12px;font-size:1.8rem;letter-spacing:3px;cursor:pointer;transition:transform .2s,box-shadow .2s;box-shadow:0 6px 30px rgba(255,223,0,.4);margin-top:10px}
+.submit-btn:hover{transform:translateY(-3px);box-shadow:0 10px 40px rgba(255,223,0,.6)}
+.submit-btn:disabled{opacity:.5;cursor:not-allowed;transform:none}
+.success-msg{display:none;text-align:center;padding:40px 20px}
+.success-msg .big{font-size:5rem;margin-bottom:10px}
+.success-msg h3{font-size:2.5rem;color:var(--verde);letter-spacing:2px}
+.success-msg p{color:rgba(255,255,255,.75);margin-top:10px;font-size:1.05rem}
+.error-msg{color:#ff6b6b;font-size:.9rem;margin-bottom:12px;display:none;padding:10px 14px;background:rgba(255,77,77,.1);border:1px solid rgba(255,77,77,.3);border-radius:8px}
+
+/* ── WHATSAPP BAR ── */
+.whatsapp-bar{background:#128c1e;text-align:center;padding:14px 20px;font-size:1.1rem;font-weight:700;letter-spacing:1px;text-transform:uppercase}
+
+/* ── ADMIN MODAL ── */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:500;display:none;align-items:center;justify-content:center;padding:20px}
+.modal-overlay.open{display:flex}
+.modal{background:#001550;border:2px solid rgba(255,223,0,.3);border-radius:20px;width:100%;max-width:700px;max-height:90vh;overflow-y:auto}
+.modal-header{background:linear-gradient(135deg,var(--azul3),var(--azul-escuro));padding:20px 24px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.1);position:sticky;top:0;z-index:10}
+.modal-header h2{font-size:1.8rem;color:var(--amarelo);letter-spacing:2px}
+.modal-close{background:none;border:none;color:var(--muted);font-size:1.5rem;cursor:pointer;padding:4px 8px;border-radius:6px;transition:color .2s}
+.modal-close:hover{color:var(--branco)}
+.modal-body{padding:24px}
+.modal-section{margin-bottom:24px}
+.modal-section h3{font-size:.85rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.08)}
+.admin-stat-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:20px}
+.participant-row{display:grid;grid-template-columns:1fr auto auto auto;align-items:center;gap:8px;padding:10px 14px;background:rgba(255,255,255,.04);border-radius:9px;margin-bottom:8px}
+.pname{font-weight:700;font-size:1rem;flex:1;min-width:120px}
+.pwa{font-size:.78rem;color:var(--muted)}
+.badge{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:3px 10px;border-radius:20px}
+.badge-ok{background:rgba(0,156,59,.2);color:#5dff8a;border:1px solid rgba(0,156,59,.3)}
+.badge-wait{background:rgba(255,150,0,.15);color:#ffb833;border:1px solid rgba(255,150,0,.25)}
+
+/* ── BUTTONS ── */
+.btn{font-weight:800;font-size:.9rem;letter-spacing:2px;text-transform:uppercase;border:none;border-radius:9px;padding:10px 18px;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;gap:7px}
+.btn-primary{background:linear-gradient(135deg,var(--amarelo),var(--amarelo-escuro));color:var(--azul-escuro)}
+.btn-primary:hover{transform:translateY(-1px);box-shadow:0 4px 16px rgba(255,223,0,.4)}
+.btn-primary:disabled{opacity:.5;cursor:not-allowed;transform:none}
+.btn-secondary{background:rgba(255,255,255,.08);color:var(--branco);border:1px solid var(--border)}
+.btn-secondary:hover{background:rgba(255,255,255,.14)}
+.btn-danger{background:rgba(255,77,77,.15);color:#ff8888;border:1px solid rgba(255,77,77,.3)}
+.btn-danger:hover{background:rgba(255,77,77,.25)}
+.btn-sm{padding:6px 12px;font-size:.75rem;letter-spacing:1px}
+.btn-full{width:100%;justify-content:center}
+
+/* ── FORM FIELDS (admin) ── */
+.afield{margin-bottom:14px}
+.afield label{display:block;font-size:.75rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--amarelo);margin-bottom:6px}
+.afield input,.afield select{width:100%;padding:10px 14px;background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.2);border-radius:9px;color:var(--branco);font-family:'Barlow',sans-serif;font-size:.95rem;outline:none;transition:border-color .2s}
+.afield input:focus,.afield select:focus{border-color:var(--amarelo)}
+.afield input::placeholder{color:rgba(255,255,255,.3)}
+.afield select option{background:#002776}
+.ag2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ag4{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:10px}
+.spinner{display:inline-block;width:14px;height:14px;border:2px solid rgba(0,0,0,.3);border-top-color:#000;border-radius:50%;animation:spin .6s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.toast{position:fixed;bottom:24px;right:24px;background:#1a1a2e;border:1px solid rgba(255,223,0,.3);border-radius:10px;padding:12px 20px;font-size:.95rem;font-weight:600;color:var(--amarelo);z-index:999;transform:translateY(80px);opacity:0;transition:all .3s}
+.toast.show{transform:translateY(0);opacity:1}
+
+@media(max-width:560px){
+  .grid-2,.grid-3,.ag2,.ag4{grid-template-columns:1fr}
+  .form-body{padding:16px}
+  .nav{padding:0 10px}
+  .admin-stat-row{grid-template-columns:1fr 1fr}
+  .ntab span{display:none}
+}
+
+/* ══ SPA PAGES ══ */
+.page{display:none;animation:fadeUp .3s ease}
+.page.active{display:block}
+@keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.ranking-page{background:linear-gradient(160deg,#002776 0%,#001030 100%);min-height:calc(100vh - 58px);padding:40px 20px 60px}
+.form-page{background:linear-gradient(160deg,#003a10 0%,#002776 100%);min-height:calc(100vh - 58px);padding:40px 20px 80px}
+.fase-badge{display:inline-block;background:rgba(255,223,0,.12);border:1px solid rgba(255,223,0,.3);border-radius:20px;padding:4px 14px;font-size:.8rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--amarelo);margin-bottom:20px}
+.empty-state .es-icon{font-size:3.5rem;display:block;margin-bottom:12px;opacity:.35}
+
+/* ══ CTA SECTION ══ */
+.cta-section{background:linear-gradient(135deg,#003a10,#001550);padding:60px 20px;text-align:center}
+.cta-section h2{font-size:clamp(2rem,5vw,3rem);color:var(--branco);letter-spacing:2px;margin-bottom:10px}
+.cta-section p{color:rgba(255,255,255,.7);font-size:1rem;margin-bottom:28px}
+.cta-btn{display:inline-block;background:linear-gradient(135deg,var(--amarelo),var(--amarelo-escuro));color:var(--azul-escuro);font-size:2rem;letter-spacing:3px;padding:18px 48px;border-radius:14px;text-decoration:none;border:none;cursor:pointer;box-shadow:0 6px 30px rgba(255,223,0,.4);transition:all .25s}
+.cta-btn:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(255,223,0,.55)}
+
+/* ══ NEYMAR GOLS ══ */
+.gols-box{display:none;margin-top:14px;background:rgba(0,200,70,.07);border:1.5px solid rgba(0,200,70,.3);border-radius:12px;padding:16px}
+.gols-box.show{display:block;animation:fadeUp .25s ease}
+.gols-box p{font-size:.92rem;font-weight:600;color:rgba(255,255,255,.8);margin-bottom:12px}
+.gols-grid{display:flex;gap:8px;flex-wrap:wrap}
+.gol-btn{background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.2);border-radius:8px;width:44px;height:44px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;color:rgba(255,255,255,.7);cursor:pointer;transition:all .2s}
+.gol-btn:hover{border-color:#00c846;background:rgba(0,200,70,.15);color:var(--branco)}
+.gol-btn.sel{background:rgba(0,200,70,.25);border-color:#00c846;color:#00c846}
+.bonus-tag{display:inline-block;background:rgba(0,200,70,.15);border:1px solid rgba(0,200,70,.3);border-radius:20px;padding:2px 10px;font-size:.75rem;font-weight:700;color:#00c846;letter-spacing:1px;margin-left:6px;vertical-align:middle}
+.ponto-row.bonus{border-left-color:#00c846;background:rgba(0,200,70,.08)}
+.wa-btn{display:block;background:linear-gradient(135deg,#25d366,#128c1e);color:#fff;font-size:1.5rem;letter-spacing:2px;padding:16px;border-radius:12px;text-decoration:none;text-align:center;margin-top:16px;transition:all .2s}
+.wa-btn:hover{transform:translateY(-2px)}
+
+
+/* ══ NOTÍCIAS ══ */
+.noticias-page{background:linear-gradient(160deg,#001a40 0%,#001030 100%);min-height:calc(100vh - 58px);padding:40px 20px 60px}
+.analise-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:14px;overflow:hidden;margin-bottom:20px;max-width:860px;margin-left:auto;margin-right:auto}
+.analise-card+.analise-card{margin-top:20px}
+.analise-header{background:linear-gradient(135deg,rgba(0,39,118,.6),rgba(0,110,41,.4));padding:14px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.analise-data{font-size:1.3rem;color:var(--amarelo);letter-spacing:2px}
+.analise-fase{font-size:.78rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;background:rgba(255,223,0,.12);border:1px solid rgba(255,223,0,.25);border-radius:20px;padding:3px 12px;color:var(--amarelo)}
+.analise-jogos{padding:12px 20px;background:rgba(0,0,0,.2);font-size:.9rem;color:rgba(255,255,255,.6);border-bottom:1px solid rgba(255,255,255,.06);white-space:pre-wrap;line-height:1.5}
+.analise-texto{padding:20px;font-size:.92rem;line-height:1.8;color:rgba(255,255,255,.88);white-space:pre-wrap}
+.analise-empty{text-align:center;padding:60px 20px;color:var(--muted)}
+.analise-empty .ei{font-size:4rem;display:block;margin-bottom:16px;opacity:.3}
+/* Admin análise */
+.atextarea{width:100%;padding:12px 14px;background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.2);border-radius:9px;color:var(--branco);font-family:'Barlow',sans-serif;font-size:.92rem;outline:none;resize:vertical;min-height:90px;transition:border-color .2s;line-height:1.6}
+.atextarea:focus{border-color:var(--amarelo)}
+.atextarea::placeholder{color:rgba(255,255,255,.3)}
+.analise-preview{background:rgba(0,156,59,.06);border:1px solid rgba(0,156,59,.2);border-radius:10px;padding:16px;margin-top:12px;font-size:.88rem;line-height:1.75;color:rgba(255,255,255,.88);white-space:pre-wrap;display:none;max-height:400px;overflow-y:auto}
+
+
+/* ══ TABELA PALPITES / PDF ══ */
+.tbl-palpites{width:100%;border-collapse:collapse;font-size:.78rem;min-width:700px}
+.tbl-palpites th{background:rgba(255,223,0,.15);color:var(--amarelo);font-family:'Barlow Condensed',sans-serif;font-size:.72rem;letter-spacing:1px;text-transform:uppercase;padding:8px 10px;text-align:left;border-bottom:2px solid rgba(255,223,0,.2);white-space:nowrap}
+.tbl-palpites td{padding:8px 10px;border-bottom:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.82);vertical-align:top}
+.tbl-palpites tr:hover td{background:rgba(255,255,255,.03)}
+.tbl-palpites .badge-ok{color:#5dff8a}.tbl-palpites .badge-wait{color:#ffb833}
+/* PDF receipt */
+@media print{
+  body *{display:none}
+  #pdf-receipt,#pdf-receipt *{display:block!important}
+  #pdf-receipt{position:fixed;top:0;left:0;width:100%;background:#fff;color:#000;padding:30px;font-family:Arial,sans-serif}
+}
+
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-logo">⚽ Bolão 2026</div>
+  <div class="nav-tabs">
+    <button class="ntab active" id="tab-inicio" onclick="irPara('inicio')">🏠 <span>Início</span></button>
+    <button class="ntab" id="tab-ranking" onclick="irPara('ranking')">🏆 <span>Ranking</span></button>
+    <button class="ntab" id="tab-inscricao" onclick="irPara('inscricao')">✏️ <span>Inscrição</span></button>
+    <button class="ntab" id="tab-noticias" onclick="irPara('noticias')">📰 <span>Notícias</span></button>
+    <button class="ntab" id="tab-admin" onclick="abrirAdmin()">⚙️ <span>Admin</span></button>
+  </div>
+</nav>
+
+<div class="page active" id="page-inicio">
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="confetti" id="confetti"></div>
+  <span class="trophy-icon">🏆</span>
+  <h1>BOLÃO<br><span>ENTRE</span><br>AMIGOS</h1>
+  <p class="sub">⚽ Copa do Mundo 2026 ⚽</p>
+  <span class="prazo-badge">⏱️ Inscrições até 13 de junho de 2026 às 12h</span>
+</section>
+
+<div class="divider"></div>
+
+<!-- STEPS -->
+<section class="steps-section">
+  <h2 class="section-title">COMO <span>PARTICIPAR</span></h2>
+  <div class="steps-grid">
+    <div class="step-card"><div class="step-number">1</div><span class="step-icon">💸</span><h3>Faça o Pix</h3><p>Envie <strong>R$ 30,00</strong> para a chave Pix:<br><strong>16 99132 9720</strong></p></div>
+    <div class="step-card"><div class="step-number">2</div><span class="step-icon">📲</span><h3>Envie o Comprovante</h3><p>Mande o print do Pix no WhatsApp <strong>(16) 99132-9720</strong> para confirmarmos seu pagamento.</p></div>
+    <div class="step-card"><div class="step-number">3</div><span class="step-icon">📋</span><h3>Preencha seus Palpites</h3><p>Responda o formulário com todos os seus palpites.</p></div>
+    <div class="step-card"><div class="step-number">4</div><span class="step-icon">💬</span><h3>Entre no Grupo</h3><p>Após confirmarmos o pagamento, acesse o <a href="https://chat.whatsapp.com/HqUBjITpYPI7TNP5Y6LmHi?mode=gi_t" target="_blank" style="color:var(--amarelo);font-weight:700">grupo oficial do WhatsApp</a>.</p></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- INFO PIX -->
+<section class="info-section">
+  <h2 class="section-title" style="color:var(--branco)">INFORMAÇÕES <span>DE PAGAMENTO</span></h2>
+  <div class="info-inner">
+    <div class="info-card"><div class="icon">💰</div><div class="label">Valor da Inscrição</div><div class="value">R$ 30,00</div></div>
+    <div class="info-card"><div class="icon">🔑</div><div class="label">Chave Pix</div><div class="value" style="font-size:1.4rem">16 99132 9720</div></div>
+    <div class="info-card"><div class="icon">📅</div><div class="label">Prazo Final</div><div class="value" style="font-size:1.3rem">10 Jun 2026</div></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PONTUAÇÃO (página início) -->
+<section class="pontos-section">
+  <h2 class="section-title">TABELA DE <span>PONTUAÇÃO</span></h2>
+  <div class="pontos-grid">
+    <div class="ponto-row"><span class="desc">🇧🇷 Brasil entre os 8 finalistas?</span><span class="pts">10 pts</span></div>
+    <div class="ponto-row"><span class="desc">⚽ Neymar marca gol na Copa?</span><span class="pts">10 pts</span></div>
+    <div class="ponto-row bonus"><span class="desc">🎯 Acertar a quantidade exata de gols do Neymar <small style="opacity:.65">(bônus)</small></span><span class="pts" style="color:#00c846">+20 pts</span></div>
+    <div class="ponto-row"><span class="desc">🏅 Acertar cada um dos 4 finalistas (×4)</span><span class="pts">10 pts</span></div>
+    <div class="ponto-row"><span class="desc">4️⃣ Acertar o 4º colocado</span><span class="pts">10 pts</span></div>
+    <div class="ponto-row"><span class="desc">🥉 Acertar o 3º colocado</span><span class="pts">20 pts</span></div>
+    <div class="ponto-row"><span class="desc">🥈 Acertar o Vice-Campeão</span><span class="pts">35 pts</span></div>
+    <div class="ponto-row"><span class="desc">🏆 Acertar o Campeão</span><span class="pts">50 pts</span></div>
+    <div class="ponto-row destaque"><span class="desc">🇧🇷⭐ Acertar o Brasil como Campeão — BÔNUS!</span><span class="pts">100 pts</span></div>
+  </div>
+  <p style="text-align:center;margin-top:14px;font-size:.85rem;color:rgba(255,255,255,.5)">Pontuações atualizadas por fase: Grupos → Oitavas → Quartas → Semi → Final</p>
+</section>
+
+<div class="divider"></div>
+
+<section class="cta-section">
+  <h2>PRONTO PARA ENTRAR?</h2>
+  <p>Faça o Pix, preencha seus palpites e torça com a gente até a final! 🇧🇷</p>
+  <button class="cta-btn" onclick="irPara('inscricao')">⚽ QUERO ME INSCREVER!</button>
+</section>
+<div style="background:#001030;border-top:2px solid rgba(255,223,0,.2);padding:12px 20px;text-align:center;display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap">
+  <span style="font-size:1.1rem;color:var(--amarelo);letter-spacing:2px">DeCaires Technology</span>
+  <a href="tel:+5567982089325" style="color:rgba(255,255,255,.6);text-decoration:none;font-size:.9rem;font-weight:600" onmouseover="this.style.color='#FFDF00'" onmouseout="this.style.color='rgba(255,255,255,.6)'">📞 (67) 98208-9325</a>
+  <a href="https://www.instagram.com/decairestechnology/" target="_blank" style="color:rgba(255,255,255,.6);text-decoration:none;font-size:.9rem;font-weight:600" onmouseover="this.style.color='#FFDF00'" onmouseout="this.style.color='rgba(255,255,255,.6)'">📸 @decairestechnology</a>
+</div>
+</div>
+
+<div class="page" id="page-ranking">
+<div class="ranking-page">
+  <h2 class="section-title" style="margin-bottom:16px">🏆 RANKING <span>AO VIVO</span></h2>
+  <div style="text-align:center;margin-bottom:20px"><span class="fase-badge" id="fase-badge">⏳ Aguardando início</span></div>
+  <div class="stat-row">
+    <div class="stat-box"><div class="sv" id="s-total">—</div><div class="sl">Inscritos</div></div>
+    <div class="stat-box"><div class="sv" id="s-conf">—</div><div class="sl">Confirmados</div></div>
+    <div class="stat-box"><div class="sv" id="s-premio">—</div><div class="sl">Premiação</div></div>
+    <div class="stat-box"><div class="sv" id="s-fase">—</div><div class="sl">Fase Atual</div></div>
+  </div>
+  <div class="ranking-list" id="ranking-list">
+    <div class="empty-state"><p>Carregando ranking...</p></div>
+  </div>
+  <button class="ai-btn" onclick="chamarIA()">🤖 Análise do Agente IA — Ver quem está na frente!</button>
+  <div class="ai-box" id="ai-box"><div class="ai-msg" id="ai-msg"></div></div>
+</div>
+<section class="pontos-section">
+  <h2 class="section-title">TABELA DE <span>PONTUAÇÃO</span></h2>
+  <div class="pontos-grid">
+    <div class="ponto-row"><span class="desc">🇧🇷 Brasil entre os 8 finalistas?</span><span class="pts">10 pts</span></div>
+    <div class="ponto-row"><span class="desc">⚽ Neymar marca gol na Copa?</span><span class="pts">10 pts</span></div>
+    <div class="ponto-row"><span class="desc">🏅 Acertar cada um dos 4 finalistas (×4)</span><span class="pts">10 pts</span></div>
+    <div class="ponto-row"><span class="desc">4️⃣ Acertar o 4º colocado</span><span class="pts">10 pts</span></div>
+    <div class="ponto-row"><span class="desc">🥉 Acertar o 3º colocado</span><span class="pts">20 pts</span></div>
+    <div class="ponto-row"><span class="desc">🥈 Acertar o Vice-Campeão</span><span class="pts">35 pts</span></div>
+    <div class="ponto-row"><span class="desc">🏆 Acertar o Campeão</span><span class="pts">50 pts</span></div>
+    <div class="ponto-row destaque"><span class="desc">🇧🇷⭐ Acertar o Brasil como Campeão — BÔNUS!</span><span class="pts">100 pts</span></div>
+  </div>
+  <p style="text-align:center;margin-top:14px;font-size:.85rem;color:rgba(255,255,255,.5)">Pontuações atualizadas por fase: Grupos → Oitavas → Quartas → Semi → Final</p>
+</section>
+
+<div class="divider"></div>
+
+<!-- PREMIAÇÃO -->
+<section class="premio-section">
+  <h2 class="section-title">DISTRIBUIÇÃO <span>DO PRÊMIO</span></h2>
+  <div class="podium">
+    <div class="podium-item p2"><div class="place">🥈</div><div class="pct">30%</div><div class="desc">2º Lugar</div></div>
+    <div class="podium-item p1"><div class="place">🥇</div><div class="pct">60%</div><div class="desc">1º Lugar</div></div>
+    <div class="podium-item p3"><div class="place">🥉</div><div class="pct">10%</div><div class="desc">3º Lugar</div></div>
+  </div>
+  <p class="adm-note">⚙️ 10% da arrecadação total é destinado à taxa de administração e apuração do bolão.</p>
+</section>
+
+<div class="divider"></div>
+
+
+<div style="background:#001030;border-top:2px solid rgba(255,223,0,.2);padding:12px 20px;text-align:center;display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap">
+  <span style="font-size:1.1rem;color:var(--amarelo);letter-spacing:2px">DeCaires.Technology</span>
+  <a href="tel:+5567982089325" style="color:rgba(255,255,255,.6);text-decoration:none;font-size:.9rem;font-weight:600" onmouseover="this.style.color='#FFDF00'" onmouseout="this.style.color='rgba(255,255,255,.6)'">📞 (67) 98208-9325</a>
+  <a href="https://www.instagram.com/decaires.technology/" target="_blank" style="color:rgba(255,255,255,.6);text-decoration:none;font-size:.9rem;font-weight:600" onmouseover="this.style.color='#FFDF00'" onmouseout="this.style.color='rgba(255,255,255,.6)'">📸 @decairestechnology</a>
+</div>
+</div>
+
+<div class="page" id="page-inscricao">
+<div class="form-page">
+<!-- FORMULÁRIO -->
+<section class="form-section" id="formulario">
+  <h2 class="section-title">FAÇA SEU <span>PALPITE</span></h2>
+  <div class="form-wrapper">
+    <div class="form-header">
+      <h2>🏆 BOLÃO ENTRE AMIGOS 2026</h2>
+      <p>Grupo fechado de amigos — resenha, palpite e emoção até a final!</p>
+    </div>
+    <div class="form-body" id="formBody">
+
+      <div class="field-group">
+        <label for="f-nome">Nome ou Apelido <span>*</span></label>
+        <input type="text" id="f-nome" placeholder="Como você quer ser chamado?">
+      </div>
+      <div class="field-group">
+        <label for="f-wa">WhatsApp com DDD <span>*</span></label>
+        <input type="tel" id="f-wa" placeholder="(16) 99999-9999">
+      </div>
+
+      <div class="field-group">
+        <label>Brasil estará entre os 8 finalistas? <span>*</span></label>
+        <div class="radio-group" id="rg-brasil">
+          <label class="radio-label" onclick="selRad('brasil','Sim',this)"><input type="radio" name="brasil">✅ Sim</label>
+          <label class="radio-label" onclick="selRad('brasil','Nao',this)"><input type="radio" name="brasil">❌ Não</label>
+        </div>
+      </div>
+      <div class="field-group">
+        <label>⚽ Neymar vai marcar pelo menos 1 gol? <span>*</span></label>
+        <div class="radio-group" id="rg-neymar">
+          <label class="radio-label" onclick="selRad('neymar','Sim',this)"><input type="radio" name="neymar">✅ Sim — <span style="color:var(--amarelo);font-weight:700">+10 pts</span></label>
+          <label class="radio-label" onclick="selRad('neymar','Nao',this)"><input type="radio" name="neymar">❌ Não</label>
+        </div>
+        <!-- PONTUAÇÃO INSTANTÂNEA + GOLS BÔNUS -->
+        <div class="gols-box" id="gols-box">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;flex-wrap:wrap">
+            <span style="background:rgba(0,156,59,.2);border:1px solid rgba(0,200,70,.4);border-radius:8px;padding:6px 14px;font-weight:700;font-size:.95rem;color:#5dff8a">✅ Neymar faz gol: <strong>+10 pts</strong></span>
+            <span style="background:rgba(0,200,70,.12);border:1px solid rgba(0,200,70,.35);border-radius:8px;padding:6px 14px;font-weight:700;font-size:.95rem;color:#00c846">🎯 Acertar quantidade: <strong>+20 pts bônus!</strong></span>
+          </div>
+          <p style="font-size:.9rem;font-weight:600;color:rgba(255,255,255,.75);margin-bottom:10px">Quantos gols ele vai fazer? Selecione:</p>
+          <div class="gols-grid" id="gols-grid"></div>
+          <div id="gols-feedback" style="display:none;margin-top:10px;padding:8px 14px;background:rgba(0,200,70,.15);border-radius:8px;font-size:.95rem;font-weight:700;color:#00c846"></div>
+        </div>
+      </div>
+
+      <div class="field-group">
+        <label>Quais serão os 4 finalistas? <span>*</span></label>
+        <div class="grid-2">
+          <input type="text" id="f-f1" placeholder="Semi 1 — Time A">
+          <input type="text" id="f-f2" placeholder="Semi 1 — Time B">
+          <input type="text" id="f-f3" placeholder="Semi 2 — Time A">
+          <input type="text" id="f-f4" placeholder="Semi 2 — Time B">
+        </div>
+      </div>
+      <div class="grid-3">
+        <div class="field-group"><label>4º Colocado <span>*</span></label><input type="text" id="f-4o" placeholder="Ex: Alemanha"></div>
+        <div class="field-group"><label>3º Colocado <span>*</span></label><input type="text" id="f-3o" placeholder="Ex: França"></div>
+        <div class="field-group"><label>Vice-Campeão <span>*</span></label><input type="text" id="f-vice" placeholder="Ex: Argentina"></div>
+      </div>
+      <div class="field-group">
+        <label>🏆 Grande Campeão de 2026 <span>*</span></label>
+        <input type="text" id="f-camp" placeholder="Ex: Brasil 🇧🇷" style="border-color:rgba(255,223,0,.4)">
+      </div>
+      <!-- TABELA DE PONTUAÇÃO RESUMIDA -->
+      <div class="field-group">
+        <div style="background:rgba(0,39,118,.4);border:1px solid rgba(255,223,0,.2);border-radius:12px;padding:16px">
+          <div style="font-size:.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--amarelo);margin-bottom:12px">📊 Tabela de Pontuação</div>
+          <div style="display:grid;gap:6px">
+            <div style="display:flex;justify-content:space-between;padding:6px 10px;background:rgba(255,255,255,.04);border-radius:6px;font-size:.9rem"><span>🇧🇷 Brasil entre os 8 finalistas</span><strong style="color:var(--amarelo)">10 pts</strong></div>
+            <div style="display:flex;justify-content:space-between;padding:6px 10px;background:rgba(255,255,255,.04);border-radius:6px;font-size:.9rem"><span>⚽ Neymar marca gol</span><strong style="color:var(--amarelo)">10 pts</strong></div>
+            <div style="display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,200,70,.08);border:1px solid rgba(0,200,70,.2);border-radius:6px;font-size:.9rem"><span>🎯 Acertar qtd. exata de gols do Neymar</span><strong style="color:#00c846">+20 pts bônus</strong></div>
+            <div style="display:flex;justify-content:space-between;padding:6px 10px;background:rgba(255,255,255,.04);border-radius:6px;font-size:.9rem"><span>🏅 Cada finalista acertado (×4)</span><strong style="color:var(--amarelo)">10 pts</strong></div>
+            <div style="display:flex;justify-content:space-between;padding:6px 10px;background:rgba(255,255,255,.04);border-radius:6px;font-size:.9rem"><span>4️⃣ 4º colocado</span><strong style="color:var(--amarelo)">10 pts</strong></div>
+            <div style="display:flex;justify-content:space-between;padding:6px 10px;background:rgba(255,255,255,.04);border-radius:6px;font-size:.9rem"><span>🥉 3º colocado</span><strong style="color:var(--amarelo)">20 pts</strong></div>
+            <div style="display:flex;justify-content:space-between;padding:6px 10px;background:rgba(255,255,255,.04);border-radius:6px;font-size:.9rem"><span>🥈 Vice-Campeão</span><strong style="color:var(--amarelo)">35 pts</strong></div>
+            <div style="display:flex;justify-content:space-between;padding:6px 10px;background:rgba(255,255,255,.04);border-radius:6px;font-size:.9rem"><span>🏆 Campeão</span><strong style="color:var(--amarelo)">50 pts</strong></div>
+            <div style="display:flex;justify-content:space-between;padding:6px 10px;background:rgba(255,223,0,.08);border:1px solid rgba(255,223,0,.25);border-radius:6px;font-size:.9rem"><span>🇧🇷⭐ Brasil Campeão (bônus)</span><strong style="color:var(--amarelo)">100 pts</strong></div>
+          </div>
+        </div>
+      </div>
+      <!-- COMPROVANTE -->
+      <div class="field-group">
+        <div style="background:rgba(37,211,102,.07);border:1.5px solid rgba(37,211,102,.25);border-radius:10px;padding:14px 16px">
+          <p style="font-size:.95rem;line-height:1.65;color:rgba(255,255,255,.85)">
+            📲 <strong style="color:#25d366">Comprovante do Pix:</strong> após enviar seus palpites, o WhatsApp do organizador abre automaticamente com a mensagem pronta. Você só precisa anexar o print e enviar!
+          </p>
+        </div>
+      </div>
+      <div class="field-group">
+        <label class="checkbox-label">
+          <input type="checkbox" id="f-regras">
+          <span>✅ Confirmo que li e aceito todas as regras do Bolão Entre Amigos 2026, incluindo a taxa de administração (10%) e a distribuição da premiação (60% / 30% / 10%).</span>
+        </label>
+      </div>
+
+      <div class="error-msg" id="form-err"></div>
+      <button class="submit-btn" id="btn-submit" onclick="enviarForm()">⚽ ENVIAR PALPITES ⚽</button>
+    </div>
+
+    <div class="success-msg" id="successMsg">
+      <div class="big">🎉</div>
+      <h3>PALPITES ENVIADOS!</h3>
+      <p>Seus palpites foram registrados com sucesso!</p>
+      <div style="background:rgba(37,211,102,.08);border:1.5px solid rgba(37,211,102,.3);border-radius:12px;padding:18px;margin:16px 0;text-align:left">
+        <p style="font-size:1rem;font-weight:700;color:#25d366;margin-bottom:8px">📲 Próximo passo — Enviar comprovante</p>
+        <p style="font-size:.9rem;line-height:1.65;color:rgba(255,255,255,.8)">Clique no botão abaixo para abrir o WhatsApp do organizador com a mensagem já pronta. <strong style="color:var(--amarelo)">Só anexe o print do Pix e envie!</strong></p>
+      </div>
+      <a id="btn-wa-comprovante" href="#" target="_blank" style="display:block;background:linear-gradient(135deg,#25d366,#128c1e);color:#fff;font-family:Bebas Neue,sans-serif;font-size:1.5rem;letter-spacing:2px;padding:16px;border-radius:12px;text-decoration:none;text-align:center;margin-top:4px;box-shadow:0 4px 20px rgba(37,211,102,.35)">
+        📎 ENVIAR COMPROVANTE NO WHATSAPP
+      </a>
+      <p style="font-size:.78rem;color:rgba(255,255,255,.4);text-align:center;margin-top:8px">Após o envio, aguarde a confirmação do organizador para entrar no grupo.</p>
+      <button class="btn btn-secondary" style="margin-top:12px;width:100%;justify-content:center" onclick="novoForm()">+ Novo cadastro</button>
+    </div>
+  </div>
+</section>
+
+<div style="background:#001030;border-top:2px solid rgba(255,223,0,.2);padding:12px 20px;text-align:center;display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap">
+  <span style="font-size:1.1rem;color:var(--amarelo);letter-spacing:2px">DeCaires.Technology</span>
+  <a href="tel:+5567982089325" style="color:rgba(255,255,255,.6);text-decoration:none;font-size:.9rem;font-weight:600" onmouseover="this.style.color='#FFDF00'" onmouseout="this.style.color='rgba(255,255,255,.6)'">📞 (67) 98208-9325</a>
+  <a href="https://www.instagram.com/decairestechnology/" target="_blank" style="color:rgba(255,255,255,.6);text-decoration:none;font-size:.9rem;font-weight:600" onmouseover="this.style.color='#FFDF00'" onmouseout="this.style.color='rgba(255,255,255,.6)'">📸 @decairestechnology</a>
+</div>
+</div>
+</div>
+
+<!-- ══ PÁGINA NOTÍCIAS ════════════════════════════════ -->
+<div class="page" id="page-noticias">
+  <div class="noticias-page">
+    <h2 class="section-title" style="margin-bottom:8px">📰 ANÁLISES <span>DIÁRIAS</span></h2>
+    <p style="text-align:center;color:var(--muted);font-size:.9rem;margin-bottom:32px">Resumo dos jogos e impacto no bolão — atualizado pelo organizador após cada rodada</p>
+    <div id="noticias-lista">
+      <div class="analise-empty"><span class="ei">📰</span><p>Carregando análises...</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ MODAL ADMIN ════════════════════════════════════════ -->
+<div class="modal-overlay" id="modal-overlay" onclick="fecharModalFora(event)">
+  <div class="modal" id="modal">
+    <div class="modal-header">
+      <h2>⚙️ Painel Admin</h2>
+      <button class="modal-close" onclick="fecharAdmin()">✕</button>
+    </div>
+    <div class="modal-body">
+
+      <!-- LOGIN -->
+      <div id="admin-login">
+        <p style="color:var(--muted);font-size:.9rem;margin-bottom:16px">Acesso restrito ao organizador</p>
+        <div class="afield"><label>Senha</label><input type="password" id="admin-pw" placeholder="••••••••" onkeydown="if(event.key==='Enter')loginAdmin()"></div>
+        <button class="btn btn-primary btn-full" onclick="loginAdmin()">🔐 Entrar</button>
+        <div id="pw-err" style="display:none;margin-top:12px;padding:10px;background:rgba(255,77,77,.1);border:1px solid rgba(255,77,77,.3);border-radius:8px;color:#ff8888;font-size:.88rem">❌ Senha incorreta</div>
+      </div>
+
+      <!-- PAINEL -->
+      <div id="admin-painel" style="display:none">
+        <div class="admin-stat-row">
+          <div class="stat-box"><div class="sv" id="a-total">0</div><div class="sl">Inscritos</div></div>
+          <div class="stat-box"><div class="sv" id="a-conf">0</div><div class="sl">Pagos</div></div>
+          <div class="stat-box"><div class="sv" id="a-pend">0</div><div class="sl">Pendentes</div></div>
+          <div class="stat-box"><div class="sv" id="a-arrec">R$0</div><div class="sl">Arrecadado</div></div>
+        </div>
+
+        <!-- RESULTADOS -->
+        <div class="modal-section">
+          <h3>⚽ Resultados Oficiais da Copa</h3>
+          <div class="ag2">
+            <div class="afield"><label>Brasil entre os 8?</label>
+              <select id="r-brasil"><option value="">— Aguardando —</option><option value="Sim">✅ Sim</option><option value="Nao">❌ Não</option></select></div>
+            <div class="afield"><label>Neymar marcou gol?</label>
+              <select id="r-neymar"><option value="">— Aguardando —</option><option value="Sim">✅ Sim</option><option value="Nao">❌ Não</option></select></div>
+          </div>
+          <div class="afield">
+            <label>⚽ Gols do Neymar na Copa <small style="color:#00c846;font-size:.75rem;letter-spacing:.5px">(atualiza em tempo real — +20 pts bônus para quem acertar o número exato)</small></label>
+            <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+              <select id="r-neymar-gols" style="flex:1;min-width:120px" onchange="atualizarPreviewGols(this.value)">
+                <option value="0">0 gols (Copa não iniciou / Neymar não marcou)</option>
+                <option value="1">1 gol</option><option value="2">2 gols</option><option value="3">3 gols</option>
+                <option value="4">4 gols</option><option value="5">5 gols</option><option value="6">6 gols</option>
+                <option value="7">7 gols</option><option value="8">8 gols</option><option value="9">9 gols</option>
+                <option value="10">10 gols</option>
+              </select>
+            </div>
+            <div id="gols-admin-preview" style="display:none;margin-top:8px;padding:10px 14px;background:rgba(0,200,70,.1);border:1px solid rgba(0,200,70,.3);border-radius:8px;font-size:.88rem;color:rgba(255,255,255,.85);line-height:1.6"></div>
+            <p style="font-size:.75rem;color:rgba(255,255,255,.4);margin-top:6px">💡 Cada vez que o Neymar marcar um gol, atualize aqui e clique em Salvar. O bônus é recalculado automaticamente para todos.</p>
+          </div>
+          <div class="ag4">
+            <div class="afield"><label>Finalista 1</label><input type="text" id="r-f1" placeholder="Ex: Brasil"></div>
+            <div class="afield"><label>Finalista 2</label><input type="text" id="r-f2" placeholder="Ex: Argentina"></div>
+            <div class="afield"><label>Finalista 3</label><input type="text" id="r-f3" placeholder="Ex: França"></div>
+            <div class="afield"><label>Finalista 4</label><input type="text" id="r-f4" placeholder="Ex: Alemanha"></div>
+          </div>
+          <div class="ag2">
+            <div class="afield"><label>4º Colocado</label><input type="text" id="r-4o"></div>
+            <div class="afield"><label>3º Colocado</label><input type="text" id="r-3o"></div>
+            <div class="afield"><label>Vice-Campeão</label><input type="text" id="r-vice"></div>
+            <div class="afield"><label>🏆 Campeão</label><input type="text" id="r-camp" style="border-color:rgba(255,223,0,.3)"></div>
+          </div>
+          <div class="afield"><label>Fase Atual</label>
+            <select id="r-fase">
+              <option value="Grupos">Fase de Grupos</option><option value="Oitavas">Oitavas de Final</option>
+              <option value="Quartas">Quartas de Final</option><option value="Semifinais">Semifinais</option><option value="Final">Final</option>
+            </select></div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+            <button class="btn btn-primary" id="btn-salvar" onclick="salvarResultados()">💾 Salvar & Recalcular</button>
+            <button class="btn btn-secondary" id="btn-ia-admin" onclick="chamarIAAdmin()">🤖 Análise IA</button>
+            <span id="save-ok" style="display:none;color:#5dff8a;font-size:.85rem">✓ Salvo e pontos recalculados!</span>
+          </div>
+          <div id="ai-admin-box" style="display:none;margin-top:14px" class="ai-box">
+            <div class="ai-msg" id="ai-admin-msg"></div>
+          </div>
+        </div>
+
+
+        <!-- ANÁLISE DO DIA -->
+        <div class="modal-section">
+          <h3>📰 Análise Diária dos Jogos</h3>
+          <div class="ag2">
+            <div class="afield">
+              <label>Data dos Jogos</label>
+              <input type="date" id="a-data" style="color-scheme:dark">
+            </div>
+            <div class="afield">
+              <label>Fase</label>
+              <select id="a-fase">
+                <option value="Fase de Grupos">Fase de Grupos</option>
+                <option value="Oitavas de Final">Oitavas de Final</option>
+                <option value="Quartas de Final">Quartas de Final</option>
+                <option value="Semifinais">Semifinais</option>
+                <option value="Final">Final</option>
+              </select>
+            </div>
+          </div>
+          <div class="afield">
+            <label>Jogos do Dia <small style="color:rgba(255,255,255,.4)">(um por linha, ex: Brasil 3x1 Argentina)</small></label>
+            <textarea class="atextarea" id="a-jogos" placeholder="Brasil 3 x 1 Argentina&#10;França 2 x 0 Alemanha&#10;Espanha 1 x 1 Inglaterra"></textarea>
+          </div>
+          <div class="afield">
+            <label>Prévia dos Próximos Jogos <small style="color:rgba(255,255,255,.4)">(opcional)</small></label>
+            <textarea class="atextarea" id="a-proximos" style="min-height:60px" placeholder="Amanhã: Portugal x Brasil, Holanda x França..."></textarea>
+          </div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+            <button class="btn btn-primary" id="btn-gerar-analise" onclick="gerarAnaliseDia()">🤖 Gerar Análise com IA</button>
+            <span id="analise-ok" style="display:none;color:#5dff8a;font-size:.85rem">✓ Análise salva e publicada!</span>
+          </div>
+          <div class="analise-preview" id="analise-preview"></div>
+          <div id="analises-admin-lista" style="margin-top:16px"></div>
+        </div>
+
+        <!-- PARTICIPANTES -->
+        <div class="modal-section">
+          <h3>👥 Participantes</h3>
+          <div id="admin-lista"></div>
+        </div>
+
+        <!-- EXPORTAR PALPITES -->
+        <div class="modal-section">
+          <h3>📊 Exportar Palpites</h3>
+          <div style="background:rgba(255,255,255,.04);border-radius:12px;padding:16px">
+            <p style="font-size:.85rem;color:rgba(255,255,255,.6);margin-bottom:14px;line-height:1.5">
+              Exporte todos os palpites em formato CSV (abre no Excel) ou visualize a tabela completa.
+            </p>
+            <div style="display:flex;gap:10px;flex-wrap:wrap">
+              <button class="btn btn-primary" onclick="exportarCSV()">📥 Exportar CSV / Excel</button>
+              <button class="btn btn-secondary" onclick="verTabelaPalpites()">📋 Ver Tabela Completa</button>
+            </div>
+            <div id="tabela-palpites" style="display:none;margin-top:16px;overflow-x:auto"></div>
+          </div>
+        </div>
+
+        <button class="btn btn-danger btn-full" onclick="logoutAdmin()">🚪 Sair</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+<div id="pdf-receipt" style="display:none"></div>
+
+<script>
+// ── CONFIG ─────────────────────────────────────────────────
+// Em produção a API está no mesmo servidor, então sem URL absoluta
+const API = '';  // vazio = mesmo domínio
+
+// ── ESTADO ─────────────────────────────────────────────────
+let radios = { brasil: '', neymar: '' };
+let adminToken = '';
+
+// ── UTILS ──────────────────────────────────────────────────
+function irPara(pg){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.ntab').forEach(b=>b.classList.remove('active'));
+  document.getElementById('page-'+pg).classList.add('active');
+  const t=document.getElementById('tab-'+pg);
+  if(t) t.classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+  if(pg==='ranking') carregarRanking();
+  if(pg==='noticias') carregarNoticias();
+}
+
+function toast(msg, dur = 3000) {
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), dur);
+}
+
+let golsNeymar = 0;
+
+// Gera botões de 1-10 gols do Neymar
+(function(){
+  const grid = document.getElementById('gols-grid');
+  if(!grid) return;
+  for(let i = 1; i <= 10; i++){
+    const btn = document.createElement('div');
+    btn.className = 'gol-btn';
+    btn.textContent = i;
+    btn.onclick = () => {
+      document.querySelectorAll('.gol-btn').forEach(b => b.classList.remove('sel'));
+      btn.classList.add('sel');
+      golsNeymar = i;
+      const fb = document.getElementById('gols-feedback');
+      fb.style.display = 'block';
+      fb.textContent = `✅ Palpite: ${i} gol${i>1?'s':''} — Se acertar você leva +20 pts bônus! Total Neymar: até 30 pts 🔥`;
+    };
+    grid.appendChild(btn);
+  }
+})();
+
+function selRad(name, val, el) {
+  radios[name] = val;
+  document.querySelectorAll(`#rg-${name} .radio-label`).forEach(l => l.classList.remove('sel'));
+  el.classList.add('sel');
+  if(name === 'neymar'){
+    const box = document.getElementById('gols-box');
+    if(val === 'Sim'){
+      box.classList.add('show');
+      golsNeymar = 0;
+      document.querySelectorAll('.gol-btn').forEach(b => b.classList.remove('sel'));
+      const fb = document.getElementById('gols-feedback');
+      if(fb) fb.style.display = 'none';
+    } else {
+      box.classList.remove('show');
+      golsNeymar = 0;
+    }
+  }
+}
+
+function showErr(msg) {
+  const e = document.getElementById('form-err');
+  e.textContent = msg; e.style.display = 'block';
+}
+function hideErr() { document.getElementById('form-err').style.display = 'none'; }
+
+// ── CONFETTI ────────────────────────────────────────────────
+(function () {
+  const colors = ['#FFDF00', '#009c3b', '#ffffff', '#002776', '#00c846'];
+  const c = document.getElementById('confetti');
+  for (let i = 0; i < 35; i++) {
+    const s = document.createElement('span');
+    s.style.cssText = `left:${Math.random()*100}%;background:${colors[Math.floor(Math.random()*colors.length)]};width:${6+Math.random()*8}px;height:${10+Math.random()*10}px;border-radius:${Math.random()>.5?'50%':'2px'};animation-duration:${3+Math.random()*5}s;animation-delay:${Math.random()*6}s;`;
+    c.appendChild(s);
+  }
+})();
+
+// ── WHATSAPP FORMAT ─────────────────────────────────────────
+document.getElementById('f-wa').addEventListener('input', function () {
+  let v = this.value.replace(/\D/g, '');
+  if (v.length > 0) v = '(' + v;
+  if (v.length > 3) v = v.slice(0, 3) + ') ' + v.slice(3);
+  if (v.length > 10) v = v.slice(0, 10) + '-' + v.slice(10, 14);
+  this.value = v;
+});
+
+// ── ENVIAR FORMULÁRIO ───────────────────────────────────────
+async function enviarForm() {
+  const nome  = document.getElementById('f-nome').value.trim();
+  const wa    = document.getElementById('f-wa').value.trim();
+  const f1    = document.getElementById('f-f1').value.trim();
+  const f2    = document.getElementById('f-f2').value.trim();
+  const f3    = document.getElementById('f-f3').value.trim();
+  const f4    = document.getElementById('f-f4').value.trim();
+  const q4    = document.getElementById('f-4o').value.trim();
+  const q3    = document.getElementById('f-3o').value.trim();
+  const vice  = document.getElementById('f-vice').value.trim();
+  const camp  = document.getElementById('f-camp').value.trim();
+  const regras= document.getElementById('f-regras').checked;
+
+  if (!nome)          return showErr('⚠️ Informe seu nome ou apelido.');
+  if (!wa)            return showErr('⚠️ Informe seu WhatsApp com DDD.');
+  if (!radios.brasil) return showErr('⚠️ Responda: Brasil entre os 8 finalistas?');
+  if (!radios.neymar) return showErr('⚠️ Responda: Neymar vai marcar gol?');
+  if(radios.neymar==='Sim' && golsNeymar===0) return showErr('⚠️ Selecione quantos gols o Neymar vai fazer!');
+  if (!f1||!f2||!f3||!f4) return showErr('⚠️ Preencha os 4 finalistas.');
+  if (!q4||!q3||!vice||!camp) return showErr('⚠️ Preencha todas as posições finais.');
+  if (!regras) return showErr('⚠️ Confirme que leu as regras.');
+  hideErr();
+
+  const btn = document.getElementById('btn-submit');
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spinner"></span> Enviando...';
+
+  const fd = new FormData();
+  fd.append('nome', nome); fd.append('whatsapp', wa);
+  fd.append('brasil', radios.brasil); fd.append('neymar', radios.neymar);
+  fd.append('neymar_gols', golsNeymar);
+  fd.append('finalista1', f1); fd.append('finalista2', f2);
+  fd.append('finalista3', f3); fd.append('finalista4', f4);
+  fd.append('quarto', q4); fd.append('terceiro', q3);
+  fd.append('vice', vice); fd.append('campeao', camp);
+
+  try {
+    const r = await fetch(`${API}/api/participantes`, { method: 'POST', body: fd });
+    const d = await r.json();
+    if (!r.ok) throw new Error(d.error || 'Erro ao enviar');
+    // Monta link WhatsApp do admin com mensagem pré-preenchida
+    var msgWa = 'Ola! Me chamo ' + nome + ' e acabei de me inscrever no Bolao Entre Amigos 2026.'
+      + ' Segue o comprovante do Pix de R$ 30,00. 🏆⚽';
+    var linkWa = 'https://wa.me/5516991329720?text=' + encodeURIComponent(msgWa);
+    var btnWa = document.getElementById('btn-wa-comprovante');
+    if (btnWa) btnWa.href = linkWa;
+
+    document.getElementById('formBody').style.display = 'none';
+    document.getElementById('successMsg').style.display = 'block';
+
+    // Gera PDF recibo automaticamente
+    setTimeout(function() {
+      var golsP = (radios.neymar === 'Sim') ? golsNeymar : 0;
+      gerarPDFRecibo(nome, wa,
+        radios.brasil, radios.neymar, golsP,
+        f1, f2, f3, f4, q4, q3, vice, camp);
+    }, 800);
+
+    // Abre WhatsApp automaticamente após 2.5s (depois do PDF)
+    setTimeout(function() { window.open(linkWa, '_blank'); }, 2500);
+
+    carregarRanking();
+  } catch (e) {
+    showErr('❌ ' + e.message);
+  } finally {
+    btn.disabled = false;
+    btn.innerHTML = '⚽ ENVIAR PALPITES ⚽';
+  }
+}
+
+function novoForm() {
+  ['f-nome','f-wa','f-f1','f-f2','f-f3','f-f4','f-4o','f-3o','f-vice','f-camp'].forEach(id => document.getElementById(id).value = '');
+  document.getElementById('f-regras').checked = false;
+  radios = { brasil:'', neymar:'' }; golsNeymar = 0;
+  document.querySelectorAll('.radio-label').forEach(l => l.classList.remove('sel'));
+  document.querySelectorAll('.gol-btn').forEach(b => b.classList.remove('sel'));
+  const gb = document.getElementById('gols-box'); if(gb) gb.classList.remove('show');
+  const gf = document.getElementById('gols-feedback'); if(gf) gf.style.display='none';
+  document.getElementById('formBody').style.display = 'block';
+  document.getElementById('successMsg').style.display = 'none';
+}
+
+// ── RANKING ─────────────────────────────────────────────────
+async function carregarRanking() {
+  try {
+    const r = await fetch(`${API}/api/ranking`);
+    const d = await r.json();
+
+    document.getElementById('s-total').textContent  = d.total || 0;
+    document.getElementById('s-conf').textContent   = d.pagos || 0;
+    document.getElementById('s-premio').textContent = 'R$' + ((d.pagos || 0) * 30 * 0.9).toLocaleString('pt-BR');
+    const fb=document.getElementById('fase-badge'); if(fb) fb.textContent='📊 Fase: '+(d.resultado?.fase||'Aguardando início');
+
+    const list = document.getElementById('ranking-list');
+    if (!d.participantes?.length) {
+      list.innerHTML = '<div class="empty-state"><p>🏆 Nenhum participante confirmado ainda.</p><p style="font-size:.8rem;margin-top:6px;color:var(--muted)">Aguarde a confirmação dos pagamentos.</p></div>';
+      return;
+    }
+    list.innerHTML = d.participantes.map((p, i) => {
+      const cls = i === 0 ? 'gold' : i === 1 ? 'silver' : i === 2 ? 'bronze' : '';
+      const pc  = i === 0 ? 'p1c' : i === 1 ? 'p2c' : i === 2 ? 'p3c' : '';
+      const em  = i === 0 ? '🥇' : i === 1 ? '🥈' : i === 2 ? '🥉' : `${i+1}`;
+      return `<div class="rank-card ${cls}">
+        <div class="rank-pos ${pc}">${em}</div>
+        <div class="rank-info">
+          <div class="rank-name">${p.nome}</div>
+          <div class="rank-meta">🏆 ${p.campeao.toUpperCase()} · 📅 ${new Date(p.criado_em).toLocaleDateString('pt-BR')}</div>
+        </div>
+        <div class="rank-pts">${p.pontos}<small> pts</small></div>
+      </div>`;
+    }).join('');
+  } catch (e) {
+    console.error(e);
+  }
+}
+
+// ── AGENTE IA (público) ─────────────────────────────────────
+async function chamarIA() {
+  if (!adminToken) {
+    toast('🔒 A análise da IA está disponível no painel Admin.');
+    return;
+  }
+  chamarIAAdmin();
+}
+
+// ── ADMIN ───────────────────────────────────────────────────
+function abrirAdmin() {
+  document.getElementById('modal-overlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function fecharAdmin() {
+  document.getElementById('modal-overlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function fecharModalFora(e) {
+  if (e.target === document.getElementById('modal-overlay')) fecharAdmin();
+}
+
+async function loginAdmin() {
+  const pw = document.getElementById('admin-pw').value;
+  try {
+    const r = await fetch(`${API}/api/auth`, {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ senha: pw })
+    });
+    const d = await r.json();
+    if (!r.ok) throw new Error();
+    adminToken = d.token;
+    document.getElementById('admin-login').style.display = 'none';
+    document.getElementById('admin-painel').style.display = 'block';
+    carregarAdmin();
+    carregarAnalisesAdmin();
+  } catch {
+    document.getElementById('pw-err').style.display = 'block';
+  }
+}
+
+function logoutAdmin() {
+  adminToken = '';
+  document.getElementById('admin-login').style.display = 'block';
+  document.getElementById('admin-painel').style.display = 'none';
+  document.getElementById('admin-pw').value = '';
+  document.getElementById('pw-err').style.display = 'none';
+}
+
+async function carregarAdmin() {
+  var lista = document.getElementById('admin-lista');
+  try {
+    lista.innerHTML = '<p style="color:var(--muted);text-align:center;padding:16px">Carregando participantes...</p>';
+    var resp = await fetch(API + '/api/admin/participantes', {
+      headers: { 'Authorization': 'Bearer ' + adminToken }
+    });
+    if (!resp.ok) {
+      lista.innerHTML = '<p style="color:#ff8888;text-align:center;padding:16px">Erro ao carregar. Tente fazer login novamente.</p>';
+      return;
+    }
+    var d = await resp.json();
+    var res = d.resultado || {};
+
+    // Preenche campos de resultado
+    function sv(id, v) { var el = document.getElementById(id); if (el) el.value = (v != null) ? v : ''; }
+    sv('r-brasil', res.brasil);
+    sv('r-neymar', res.neymar);
+    sv('r-neymar-gols', res.neymar_gols || 0);
+    sv('r-f1', res.finalista1); sv('r-f2', res.finalista2);
+    sv('r-f3', res.finalista3); sv('r-f4', res.finalista4);
+    sv('r-4o', res.quarto);     sv('r-3o', res.terceiro);
+    sv('r-vice', res.vice);     sv('r-camp', res.campeao);
+    sv('r-fase', res.fase || 'Grupos');
+    try { atualizarPreviewGols(res.neymar_gols || 0); } catch(ex) {}
+
+    // Stats
+    var parts = d.participantes || [];
+    var nPagos = 0, nPend = 0;
+    for (var i = 0; i < parts.length; i++) {
+      if (parts[i].pago) nPagos++; else nPend++;
+    }
+    document.getElementById('a-total').textContent = parts.length;
+    document.getElementById('a-conf').textContent  = nPagos;
+    document.getElementById('a-pend').textContent  = nPend;
+    document.getElementById('a-arrec').textContent = 'R$' + (nPagos * 30).toLocaleString('pt-BR');
+
+    // Lista
+    if (!parts.length) {
+      lista.innerHTML = '<p style="color:var(--muted);text-align:center;padding:20px">Nenhum inscrito ainda.</p>';
+      return;
+    }
+    var html = '';
+    for (var i = 0; i < parts.length; i++) {
+      var p = parts[i];
+      var dt = new Date(p.criado_em).toLocaleDateString('pt-BR');
+      var gols = p.neymar === 'Sim' ? ((p.neymar_gols || '?') + ' gols') : 'Nao';
+      var badge = p.pago
+        ? '<span class="badge badge-ok" style="white-space:nowrap">Pago</span>'
+        : '<span class="badge badge-wait" style="white-space:nowrap">Pendente</span>';
+      var btnAcao = p.pago
+        ? '<button class="btn btn-sm btn-danger" style="white-space:nowrap" onclick="togglePago(' + p.id + ',false)">Revogar</button>'
+        : '<button class="btn btn-sm btn-primary" style="white-space:nowrap" onclick="togglePago(' + p.id + ',true)">Confirmar</button>';
+      var btnDel = '<button class="btn btn-sm btn-danger" title="Remover" onclick="deletarParticipante(' + p.id + ')">Del</button>';
+      html += '<div class="participant-row">'
+        + '<div style="min-width:0;overflow:hidden">'
+        + '<div class="pname">' + p.nome + '</div>'
+        + '<div class="pwa">' + p.whatsapp + ' - ' + dt + '</div>'
+        + '<div style="font-size:.72rem;color:var(--muted)">' + p.campeao.toUpperCase() + ' | ' + gols + ' | <strong style="color:var(--amarelo)">' + p.pontos + ' pts</strong></div>'
+        + '</div>'
+        + badge + btnAcao + btnDel
+        + '</div>';
+    }
+    lista.innerHTML = html;
+
+  } catch (e) {
+    console.error('Erro carregarAdmin:', e);
+    lista.innerHTML = '<p style="color:#ff8888;text-align:center;padding:16px">Erro inesperado: ' + e.message + '</p>';
+  }
+}
+
+async function deletarParticipante(id) {
+  if (!confirm('Confirmar remocao do participante?')) return;
+  await fetch(API + '/api/admin/participantes/' + id, {
+    method: 'DELETE',
+    headers: { 'Authorization': 'Bearer ' + adminToken }
+  });
+  toast('Participante removido');
+  carregarAdmin();
+  carregarRanking();
+}
+
+
+async function togglePago(id, val) {
+  await fetch(`${API}/api/admin/participantes/${id}`, {
+    method: 'PATCH', headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${adminToken}` },
+    body: JSON.stringify({ pago: val })
+  });
+  carregarAdmin(); carregarRanking();
+}
+
+async function remover(id, nome) {
+  if (!confirm('Remover "' + nome + '" do bolão?')) return;
+  await fetch(API + '/api/admin/participantes/' + id, {
+    method: 'DELETE', headers: { 'Authorization': 'Bearer ' + adminToken }
+  });
+  toast('🗑 Participante removido'); carregarAdmin(); carregarRanking();
+}
+
+async function salvarResultados() {
+  const btn = document.getElementById('btn-salvar');
+  btn.disabled = true; btn.innerHTML = '<span class="spinner"></span> Salvando...';
+
+  const body = {
+    brasil:     document.getElementById('r-brasil').value,
+    neymar:     document.getElementById('r-neymar').value,
+    finalista1: document.getElementById('r-f1').value,
+    finalista2: document.getElementById('r-f2').value,
+    finalista3: document.getElementById('r-f3').value,
+    finalista4: document.getElementById('r-f4').value,
+    quarto:     document.getElementById('r-4o').value,
+    terceiro:   document.getElementById('r-3o').value,
+    vice:       document.getElementById('r-vice').value,
+    campeao:    document.getElementById('r-camp').value,
+    fase:       document.getElementById('r-fase').value,
+    neymar_gols: parseInt(document.getElementById('r-neymar-gols')?.value)||0
+  };
+
+  try {
+    const r = await fetch(`${API}/api/admin/resultados`, {
+      method: 'PUT', headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${adminToken}` },
+      body: JSON.stringify(body)
+    });
+    const d = await r.json();
+    if (!r.ok) throw new Error(d.error);
+    const ok = document.getElementById('save-ok');
+    ok.textContent = `✓ Salvo! ${d.atualizados} participantes recalculados.`;
+    ok.style.display = 'inline';
+    setTimeout(() => ok.style.display = 'none', 4000);
+    carregarAdmin(); carregarRanking();
+  } catch (e) {
+    toast('❌ Erro ao salvar: ' + e.message);
+  } finally {
+    btn.disabled = false; btn.innerHTML = '💾 Salvar & Recalcular';
+  }
+}
+
+async function chamarIAAdmin() {
+  const box = document.getElementById('ai-admin-box');
+  const msg = document.getElementById('ai-admin-msg');
+  box.style.display = 'block';
+  msg.innerHTML = '<div class="ai-typing"><div class="ai-dot"></div><div class="ai-dot"></div><div class="ai-dot"></div></div>';
+
+  try {
+    const r = await fetch(`${API}/api/admin/calcular-ia`, {
+      method: 'POST', headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${adminToken}` }
+    });
+    const d = await r.json();
+    if (!r.ok) throw new Error(d.error);
+    msg.innerHTML = d.analise.replace(/\n/g, '<br>');
+
+    // Atualiza caixa pública também
+    const pub = document.getElementById('ai-box');
+    const pubMsg = document.getElementById('ai-msg');
+    pub.style.display = 'block';
+    pubMsg.innerHTML = d.analise.replace(/\n/g, '<br>');
+  } catch (e) {
+    msg.innerHTML = '⚠️ Erro ao chamar agente IA: ' + e.message;
+  }
+}
+
+// Botão IA público — abre admin se não logado
+async function chamarIA() {
+  if (!adminToken) {
+    const box = document.getElementById('ai-box');
+    const msg = document.getElementById('ai-msg');
+    box.style.display = 'block';
+    msg.innerHTML = '<div class="ai-typing"><div class="ai-dot"></div><div class="ai-dot"></div><div class="ai-dot"></div></div>';
+    try {
+      // Tenta endpoint público (sem auth, retorna análise se tiver dados)
+      const r = await fetch(`${API}/api/ranking`);
+      const d = await r.json();
+      if (!d.participantes?.length) {
+        msg.innerHTML = 'Nenhum participante confirmado para analisar ainda.';
+        return;
+      }
+      msg.innerHTML = '🔒 O agente IA está disponível para o organizador no painel Admin. Peça para ele rodar a análise e compartilhar aqui!';
+    } catch { msg.innerHTML = '⚠️ Erro de conexão.'; }
+    return;
+  }
+  chamarIAAdmin();
+}
+
+
+// ── NOTÍCIAS ─────────────────────────────────────────────
+async function carregarNoticias() {
+  var lista = document.getElementById('noticias-lista');
+  try {
+    var r = await fetch(API + '/api/analises');
+    var d = await r.json();
+    var analises = d.analises || [];
+    if (!analises.length) {
+      lista.innerHTML = '<div class="analise-empty"><span class="ei">📰</span><p>Nenhuma análise publicada ainda.</p><p style="font-size:.85rem;margin-top:8px">O organizador irá publicar análises após cada rodada!</p></div>';
+      return;
+    }
+    lista.innerHTML = analises.map(function(a) {
+      var dt = new Date(a.data_jogo + 'T12:00:00').toLocaleDateString('pt-BR', {weekday:'long',day:'2-digit',month:'long'});
+      return '<div class="analise-card">'
+        + '<div class="analise-header">'
+        + '<span class="analise-data">📅 ' + dt.toUpperCase() + '</span>'
+        + '<span class="analise-fase">' + a.fase + '</span>'
+        + '</div>'
+        + '<div class="analise-jogos">⚽ ' + a.jogos + '</div>'
+        + '<div class="analise-texto">' + a.analise.replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/\n/g,'<br>') + '</div>'
+        + '</div>';
+    }).join('');
+  } catch(e) {
+    lista.innerHTML = '<div class="analise-empty"><span class="ei">⚠️</span><p>Erro ao carregar análises.</p></div>';
+  }
+}
+
+async function gerarAnaliseDia() {
+  var btn = document.getElementById('btn-gerar-analise');
+  var preview = document.getElementById('analise-preview');
+  var ok = document.getElementById('analise-ok');
+  var data = document.getElementById('a-data').value;
+  var fase = document.getElementById('a-fase').value;
+  var jogos = document.getElementById('a-jogos').value.trim();
+  var proximos = document.getElementById('a-proximos').value.trim();
+
+  if (!data) return toast('⚠️ Informe a data dos jogos');
+  if (!jogos) return toast('⚠️ Informe os jogos do dia');
+
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spinner"></span> Gerando análise...';
+  preview.style.display = 'block';
+  preview.innerHTML = '<div class="ai-typing"><div class="ai-dot"></div><div class="ai-dot"></div><div class="ai-dot"></div></div>';
+  ok.style.display = 'none';
+
+  try {
+    var r = await fetch(API + '/api/admin/analise-dia', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + adminToken },
+      body: JSON.stringify({ data_jogo: data, fase: fase, jogos: jogos, proximo_dia: proximos })
+    });
+    var d = await r.json();
+    if (!r.ok) throw new Error(d.error || 'Erro ao gerar');
+    preview.innerHTML = d.analise.replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/\n/g,'<br>');
+    ok.style.display = 'inline';
+    setTimeout(function(){ ok.style.display = 'none'; }, 5000);
+    document.getElementById('a-jogos').value = '';
+    document.getElementById('a-proximos').value = '';
+    carregarAnalisesAdmin();
+  } catch(e) {
+    preview.innerHTML = '<span style="color:#ff8888">❌ Erro: ' + e.message + '</span>';
+  } finally {
+    btn.disabled = false;
+    btn.innerHTML = '🤖 Gerar Análise com IA';
+  }
+}
+
+async function carregarAnalisesAdmin() {
+  var lista = document.getElementById('analises-admin-lista');
+  if (!lista) return;
+  try {
+    var r = await fetch(API + '/api/analises');
+    var d = await r.json();
+    var analises = d.analises || [];
+    if (!analises.length) { lista.innerHTML = ''; return; }
+    var html = '<p style="font-size:.78rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:8px">Analises publicadas:</p>';
+    analises.slice(0,5).forEach(function(a) {
+      var dt = new Date(a.data_jogo + 'T12:00:00').toLocaleDateString('pt-BR');
+      html += '<div style="display:flex;align-items:center;justify-content:space-between;padding:8px 12px;background:rgba(255,255,255,.04);border-radius:8px;margin-bottom:6px;gap:8px">'
+            + '<span style="font-size:.9rem;color:rgba(255,255,255,.8)">Data: ' + dt + ' - ' + a.fase + '</span>'
+            + '<button class="btn btn-sm btn-danger" onclick="deletarAnalise(' + a.id + ')">Deletar</button>'
+            + '</div>';
+    });
+    lista.innerHTML = html;
+  } catch(e) {}
+}
+
+async function deletarAnalise(id) {
+  if (!confirm('Remover esta análise?')) return;
+  await fetch(API + '/api/admin/analise-dia/' + id, {
+    method: 'DELETE',
+    headers: { 'Authorization': 'Bearer ' + adminToken }
+  });
+  toast('🗑 Análise removida');
+  carregarAnalisesAdmin();
+  carregarNoticias();
+}
+
+
+// ── EXPORTAR CSV ────────────────────────────────────────
+async function exportarCSV() {
+  try {
+    var r = await fetch(API + '/api/admin/participantes', {
+      headers: { 'Authorization': 'Bearer ' + adminToken }
+    });
+    var d = await r.json();
+    var parts = d.participantes || [];
+    if (!parts.length) { toast('Nenhum participante para exportar'); return; }
+
+    var header = ['Nome','WhatsApp','Pago','Brasil Finalista','Neymar Gol','Qtd Gols Neymar',
+      'Finalista 1','Finalista 2','Finalista 3','Finalista 4',
+      '4 Colocado','3 Colocado','Vice-Campeao','Campeao','Pontos','Data Inscricao'];
+
+    var rows = parts.map(function(p) {
+      var dt = new Date(p.criado_em).toLocaleDateString('pt-BR');
+      return [
+        p.nome, p.whatsapp, p.pago ? 'Sim' : 'Nao',
+        p.brasil, p.neymar, p.neymar_gols || 0,
+        p.finalista1, p.finalista2, p.finalista3, p.finalista4,
+        p.quarto, p.terceiro, p.vice, p.campeao, p.pontos, dt
+      ].map(function(v) {
+        var s = String(v || '');
+        if (s.indexOf(',') >= 0 || s.indexOf('"') >= 0) s = '"' + s.replace(/"/g, '""') + '"';
+        return s;
+      }).join(',');
+    });
+
+    var bom = String.fromCharCode(0xFEFF);
+    var csv = bom + header.join(',') + '\n' + rows.join('\n');
+    var blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url; a.download = 'bolao2026_palpites.csv';
+    document.body.appendChild(a); a.click();
+    document.body.removeChild(a); URL.revokeObjectURL(url);
+    toast('CSV exportado com sucesso!');
+  } catch(e) { toast('Erro ao exportar: ' + e.message); }
+}
+
+// ── VER TABELA PALPITES ─────────────────────────────────
+async function verTabelaPalpites() {
+  var div = document.getElementById('tabela-palpites');
+  if (div.style.display === 'block') { div.style.display = 'none'; return; }
+  try {
+    var r = await fetch(API + '/api/admin/participantes', {
+      headers: { 'Authorization': 'Bearer ' + adminToken }
+    });
+    var d = await r.json();
+    var parts = d.participantes || [];
+    if (!parts.length) { toast('Nenhum participante ainda'); return; }
+
+    var html = '<table class="tbl-palpites"><thead><tr>'
+      + '<th>#</th><th>Nome</th><th>WA</th><th>Status</th>'
+      + '<th>Brasil</th><th>Neymar</th><th>Gols</th>'
+      + '<th>F1</th><th>F2</th><th>F3</th><th>F4</th>'
+      + '<th>4o</th><th>3o</th><th>Vice</th><th>Campeao</th>'
+      + '<th>Pts</th>'
+      + '</tr></thead><tbody>';
+
+    parts.forEach(function(p, i) {
+      var status = p.pago
+        ? '<span class="badge-ok">Pago</span>'
+        : '<span class="badge-wait">Pendente</span>';
+      html += '<tr>'
+        + '<td>' + (i+1) + '</td>'
+        + '<td style="font-weight:700">' + p.nome + '</td>'
+        + '<td>' + p.whatsapp + '</td>'
+        + '<td>' + status + '</td>'
+        + '<td>' + p.brasil + '</td>'
+        + '<td>' + p.neymar + '</td>'
+        + '<td style="text-align:center">' + (p.neymar_gols || 0) + '</td>'
+        + '<td>' + p.finalista1 + '</td>'
+        + '<td>' + p.finalista2 + '</td>'
+        + '<td>' + p.finalista3 + '</td>'
+        + '<td>' + p.finalista4 + '</td>'
+        + '<td>' + p.quarto + '</td>'
+        + '<td>' + p.terceiro + '</td>'
+        + '<td>' + p.vice + '</td>'
+        + '<td style="font-weight:700;color:var(--amarelo)">' + p.campeao + '</td>'
+        + '<td style="font-weight:700;color:var(--amarelo)">' + p.pontos + '</td>'
+        + '</tr>';
+    });
+    html += '</tbody></table>';
+    div.innerHTML = html;
+    div.style.display = 'block';
+  } catch(e) { toast('Erro: ' + e.message); }
+}
+
+// ── GERAR PDF RECIBO DO PARTICIPANTE ───────────────────
+function gerarPDFRecibo(nome, wa, brasil, neymar, golsNeymarP, f1, f2, f3, f4, quarto, terceiro, vice, campeao) {
+  var data = new Date().toLocaleDateString('pt-BR', {day:'2-digit',month:'long',year:'numeric'});
+  var hora = new Date().toLocaleTimeString('pt-BR', {hour:'2-digit',minute:'2-digit'});
+
+  var html = '<div style="max-width:600px;margin:0 auto;padding:32px;font-family:Arial,sans-serif;color:#1a1a2e;background:#fff">'
+    + '<div style="text-align:center;border-bottom:3px solid #009c3b;padding-bottom:20px;margin-bottom:24px">'
+    + '<div style="font-size:2.5rem;margin-bottom:6px">🏆</div>'
+    + '<h1 style="font-size:1.8rem;font-weight:900;color:#002776;letter-spacing:2px;margin:0">BOLAO ENTRE AMIGOS 2026</h1>'
+    + '<p style="color:#009c3b;font-weight:700;margin:4px 0 0;font-size:.95rem">COMPROVANTE DE INSCRICAO</p>'
+    + '</div>'
+
+    + '<table style="width:100%;border-collapse:collapse;margin-bottom:20px">'
+    + '<tr><td style="padding:8px 12px;background:#f0f4ff;font-weight:700;width:40%;border-radius:4px">Participante</td>'
+    + '<td style="padding:8px 12px">' + nome + '</td></tr>'
+    + '<tr><td style="padding:8px 12px;background:#f0f4ff;font-weight:700;border-radius:4px">WhatsApp</td>'
+    + '<td style="padding:8px 12px">' + wa + '</td></tr>'
+    + '<tr><td style="padding:8px 12px;background:#f0f4ff;font-weight:700;border-radius:4px">Data / Hora</td>'
+    + '<td style="padding:8px 12px">' + data + ' as ' + hora + '</td></tr>'
+    + '</table>'
+
+    + '<h3 style="color:#002776;border-left:4px solid #FFDF00;padding-left:10px;margin:20px 0 12px">PALPITES REGISTRADOS</h3>'
+    + '<table style="width:100%;border-collapse:collapse">'
+    + '<tr style="background:#002776;color:#fff">'
+    + '<th style="padding:8px 12px;text-align:left;font-size:.8rem;text-transform:uppercase">Pergunta</th>'
+    + '<th style="padding:8px 12px;text-align:left;font-size:.8rem;text-transform:uppercase">Seu Palpite</th>'
+    + '<th style="padding:8px 12px;text-align:right;font-size:.8rem;text-transform:uppercase">Pts possiveis</th>'
+    + '</tr>'
+
+    + fmtLinha('Brasil entre os 8 finalistas?', brasil, '10 pts')
+    + fmtLinha('Neymar vai marcar gol?', neymar, '10 pts')
+    + (neymar === 'Sim' ? fmtLinha('Qtd gols do Neymar (bonus)', golsNeymarP + ' gols', '+20 pts') : '')
+    + fmtLinha('Finalista 1', f1.toUpperCase(), '10 pts')
+    + fmtLinha('Finalista 2', f2.toUpperCase(), '10 pts')
+    + fmtLinha('Finalista 3', f3.toUpperCase(), '10 pts')
+    + fmtLinha('Finalista 4', f4.toUpperCase(), '10 pts')
+    + fmtLinha('4 Colocado', quarto.toUpperCase(), '10 pts')
+    + fmtLinha('3 Colocado', terceiro.toUpperCase(), '20 pts')
+    + fmtLinha('Vice-Campeao', vice.toUpperCase(), '35 pts')
+    + fmtLinha('Grande Campeao', campeao.toUpperCase(), '50 pts')
+
+    + '</table>'
+
+    + '<div style="background:#002776;color:#fff;padding:14px;border-radius:8px;margin-top:20px;text-align:center">'
+    + '<p style="margin:0;font-size:.85rem">Pontuacao maxima possivel: <strong style="color:#FFDF00">185 pts</strong> (+ bonus Brasil campeao: 100 pts)</p>'
+    + '</div>'
+
+    + '<div style="text-align:center;margin-top:24px;padding-top:16px;border-top:1px solid #eee;color:#888;font-size:.75rem">'
+    + '<p>Apos confirmar o pagamento do Pix (R$ 30,00) para 16 99132-9720,</p>'
+    + '<p>voce sera adicionado ao grupo oficial do WhatsApp.</p>'
+    + '<p style="margin-top:8px;color:#002776;font-weight:700">DeCaires Technology - (67) 98208-9325</p>'
+    + '</div>'
+    + '</div>';
+
+  var receipt = document.getElementById('pdf-receipt');
+  receipt.innerHTML = html;
+
+  // Usar print CSS para gerar o PDF
+  var w = window.open('', '_blank', 'width=700,height=900');
+  w.document.write('<html><head><title>Recibo - ' + nome + ' - Bolao 2026</title>'
+    + '<style>body{margin:0;background:#fff}@media print{body{margin:0}}</style>'
+    + '</head><body>' + html
+    + '<script>window.onload=function(){setTimeout(function(){window.print();setTimeout(function(){window.close();},500);},400);}<\/script>'
+    + '</body></html>');
+  w.document.close();
+}
+
+function fmtLinha(label, valor, pts) {
+  var bg = arguments.length > 0 ? 'transparent' : '#f9f9f9';
+  return '<tr style="border-bottom:1px solid #eee">'
+    + '<td style="padding:8px 12px;font-size:.88rem;color:#444">' + label + '</td>'
+    + '<td style="padding:8px 12px;font-weight:700;color:#002776">' + valor + '</td>'
+    + '<td style="padding:8px 12px;text-align:right;color:#009c3b;font-weight:700;font-size:.85rem">' + pts + '</td>'
+    + '</tr>';
+}
+
+// ── INIT ─────────────────────────────────────────────────
+// Define data padrão para análise
+(function(){ var el = document.getElementById('a-data'); if(el) el.value = new Date().toISOString().split('T')[0]; })();
+carregarRanking();
+setInterval(carregarRanking, 30000);
+
+// ── PRAZO INSCRICOES ────────────────────────────────────────
+(function() {
+  var prazo = new Date('2026-06-13T12:00:00');
+  var agora = new Date();
+  if (agora > prazo) {
+    var formPage = document.getElementById('page-inscricao');
+    if (formPage) {
+      var fw = formPage.querySelector('.form-wrapper');
+      if (fw) {
+        fw.innerHTML = '<div style="text-align:center;padding:60px 30px">'
+          + '<div style="font-size:4rem;margin-bottom:16px">⏰</div>'
+          + '<h2 style="font-family:Bebas Neue,sans-serif;font-size:2.5rem;color:var(--amarelo);letter-spacing:3px;margin-bottom:12px">INSCRICOES ENCERRADAS</h2>'
+          + '<p style="color:rgba(255,255,255,.7);font-size:1rem;line-height:1.6;margin-bottom:24px">O prazo para inscricoes encerrou em 13 de junho de 2026 às 12h.<br>Acompanhe o ranking e torca pelo seu palpite!</p>'
+          + '<button class="cta-btn" onclick="irPara(\'ranking\')" style="font-size:1.3rem;padding:14px 36px">Ver Ranking</button>'
+          + '</div>';
+      }
+    }
+    // Esconder aba de inscricao na nav
+    var tabInsc = document.getElementById('tab-inscricao');
+    if (tabInsc) tabInsc.style.display = 'none';
+  }
+})();
+ // atualiza a cada 30s
+</script>
+</body>
+</html>
